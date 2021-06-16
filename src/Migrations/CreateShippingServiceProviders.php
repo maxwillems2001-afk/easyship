@@ -1,9 +1,11 @@
 <?php
 
-namespace ShippgingServiceProviderTemplate\Migrations;
+namespace ShippingServiceProviderTemplate\Migrations;
 
 
 use ShippingServiceProviderTemplate\Helpers\ShippingServiceProviders;
+use Plenty\Modules\Order\Shipping\ServiceProvider\Contracts\ShippingServiceProviderRepositoryContract;
+use Plenty\Plugin\Log\Loggable;
 
 class CreateShippingServiceProviders
 {
@@ -36,7 +38,7 @@ class CreateShippingServiceProviders
             }
             catch (\Exception $e)
             {
-                $this->getLogger(PluginConstants::PLUGIN_NAME)->critical('Could not save or update shipping service provider');
+                $this->getLogger(ShippingServiceProviders::PLUGIN_NAME)->critical('Could not save or update shipping service provider');
             }
         }
     }

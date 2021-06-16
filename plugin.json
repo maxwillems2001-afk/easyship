@@ -9,6 +9,6 @@
     "authorIcon"        :   "icon_author_xs.png",
     "serviceProvider"   :   "ShippingServiceProviderTemplate\\Providers\\ShippingServiceProviderTemplateServiceProvider",
     "runOnBuild": [
-        "ShippingServiceProviderTemplate\\Migrations\\CreateShippingServiceProvider"
+        "ShippingServiceProviderTemplate\\Migrations\\CreateShippingServiceProviders"
     ]
 }

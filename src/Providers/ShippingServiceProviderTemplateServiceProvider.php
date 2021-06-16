@@ -4,6 +4,7 @@ namespace ShippingServiceProviderTemplate\Providers;
 
 use Plenty\Plugin\ServiceProvider;
 use ShippingServiceProviderTemplate\Helpers\ShippingServiceProviders;
+use Plenty\Modules\Order\Shipping\ServiceProvider\Services\ShippingServiceProviderService;
 
 /**
  * Class ShippingServiceProviderTemplateServiceProvider
