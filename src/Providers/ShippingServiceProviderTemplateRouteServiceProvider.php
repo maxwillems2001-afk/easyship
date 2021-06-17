@@ -16,6 +16,6 @@ class ShippingServiceProviderTemplateRouteServiceProvider extends RouteServicePr
      */
     public function map(Router $router)
     {
-        $router->get('hello-world','ShippingServiceProviderTemplate\Controllers\ShippingServiceProviderTemplateController@getHelloWorldPage');
+//        $router->get('hello-world','ShippingServiceProviderTemplate\Controllers\ShippingServiceProviderTemplateController@getHelloWorldPage');
     }
 }

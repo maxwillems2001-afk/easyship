@@ -29,17 +29,14 @@ class ShippingServiceProviderTemplateServiceProvider extends ServiceProvider
         ShippingServiceProviderService $shippingServiceProviderService
     )
     {
-        foreach (ShippingServiceProviders::SHIPPING_SERVICE_PROVIDERS as $shippingServiceProvider)
-        {
-            $shippingServiceProviderService->registerShippingProvider(
-                ShippingServiceProviders::PLUGIN_NAME,
-                ['de' => $shippingServiceProvider["name"], 'en' => $shippingServiceProvider["name"]],
-                [
-                    'ShippingServiceProviderTemplate\\Controllers\\ShipmentController@registerShipments',
-                    'ShippingServiceProviderTemplate\\Controllers\\ShipmentController@deleteShipments',
-                    'ShippingServiceProviderTemplate\\Controllers\\ShipmentController@getLabels',
-                ]
-            );
-        }
+        $shippingServiceProviderService->registerShippingProvider(
+            ShippingServiceProviders::PLUGIN_NAME,
+            ['de' => ShippingServiceProviders::SHIPPING_SERVICE_PROVIDER_NAME, 'en' => ShippingServiceProviders::SHIPPING_SERVICE_PROVIDER_NAME],
+            [
+                'ShippingServiceProviderTemplate\\Controllers\\ShipmentController@registerShipments',
+                'ShippingServiceProviderTemplate\\Controllers\\ShipmentController@deleteShipments',
+                'ShippingServiceProviderTemplate\\Controllers\\ShipmentController@getLabels',
+            ]
+        );
     }
 }

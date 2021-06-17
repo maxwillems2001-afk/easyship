@@ -2,11 +2,14 @@
 
 namespace ShippingServiceProviderTemplate\Migrations;
 
-
 use ShippingServiceProviderTemplate\Helpers\ShippingServiceProviders;
 use Plenty\Modules\Order\Shipping\ServiceProvider\Contracts\ShippingServiceProviderRepositoryContract;
 use Plenty\Plugin\Log\Loggable;
 
+/**
+ * Class CreateShippingServiceProviders
+ * @package ShippingServiceProviderTemplate\Migrations
+ */
 class CreateShippingServiceProviders
 {
     use Loggable;
@@ -28,18 +31,16 @@ class CreateShippingServiceProviders
      */
     public function run()
     {
-        foreach (ShippingServiceProviders::SHIPPING_SERVICE_PROVIDERS as $shippingServiceProvider) {
-            try
-            {
-                $this->shippingServiceProviderRepository->saveShippingServiceProvider(
-                    ShippingServiceProviders::PLUGIN_NAME,
-                    $shippingServiceProvider["name"]
-                );
-            }
-            catch (\Exception $e)
-            {
-                $this->getLogger(ShippingServiceProviders::PLUGIN_NAME)->critical('Could not save or update shipping service provider');
-            }
+        try
+        {
+            $this->shippingServiceProviderRepository->saveShippingServiceProvider(
+                ShippingServiceProviders::PLUGIN_NAME,
+                ShippingServiceProviders::SHIPPING_SERVICE_PROVIDER_NAME
+            );
+        }
+        catch (\Exception $e)
+        {
+            $this->getLogger(ShippingServiceProviders::PLUGIN_NAME)->critical('Could not save or update shipping service provider');
         }
     }
 }

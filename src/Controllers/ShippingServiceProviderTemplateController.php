@@ -5,6 +5,10 @@ namespace ShippingServiceProviderTemplate\Controllers;
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Http\Request;
 
+/**
+ * Class ShippingServiceProviderTemplateController
+ * @package ShippingServiceProviderTemplate\Controllers
+ */
 class ShippingServiceProviderTemplateController extends Controller
 {
     /**
