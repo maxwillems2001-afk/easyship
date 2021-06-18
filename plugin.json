@@ -5,10 +5,12 @@
     "version"           :   "1.0.0",
     "pluginIcon"        :   "icon_plugin_xs.png",
     "description"       :   "Use this plugin to integrate the interface for multiple custom shipping service providers in your plentymarkets 7 system.",
-    "author"            :   "vcoras",
+    "author"            :   "plentysystems AG",
+    "email"             :   "sales@plentymarkets.com",
+    "phone"             :   "+49 561 98 681 100",
     "authorIcon"        :   "icon_author_xs.png",
-    "serviceProvider"   :   "ShippingServiceProviderTemplate\\Providers\\ShippingServiceProviderTemplateServiceProvider",
+    "serviceProvider"   :   "ShippingServiceProviderTemplate\\Providers\\ServiceProvider",
     "runOnBuild": [
-        "ShippingServiceProviderTemplate\\Migrations\\CreateShippingServiceProviders"
+        "ShippingServiceProviderTemplate\\Migrations\\CreateShippingServiceProvider"
     ]
 }

@@ -3,12 +3,11 @@
 namespace ShippingServiceProviderTemplate\Helpers;
 
 /**
- * Class ShippingServiceProviders
+ * Class ShippingServiceProvider
  * @package ShippingServiceProviderTemplate\Helpers
  */
-class ShippingServiceProviders
+class ShippingServiceProvider
 {
     const PLUGIN_NAME = "ShippingServiceProviderTemplate";
     const SHIPPING_SERVICE_PROVIDER_NAME = "Shipping service provider name";
-
 }

@@ -2,22 +2,22 @@
 
 namespace ShippingServiceProviderTemplate\Providers;
 
-use Plenty\Plugin\ServiceProvider;
-use ShippingServiceProviderTemplate\Helpers\ShippingServiceProviders;
+use Plenty\Plugin\ServiceProvider as PlentyServiceProvider;
 use Plenty\Modules\Order\Shipping\ServiceProvider\Services\ShippingServiceProviderService;
+use ShippingServiceProviderTemplate\Helpers\ShippingServiceProvider;
 
 /**
- * Class ShippingServiceProviderTemplateServiceProvider
+ * Class ServiceProvider
  * @package ShippingServiceProviderTemplate\Providers
  */
-class ShippingServiceProviderTemplateServiceProvider extends ServiceProvider
+class ServiceProvider extends PlentyServiceProvider
 {
     /**
     * Register the route service provider
     */
     public function register()
     {
-        $this->getApplication()->register(ShippingServiceProviderTemplateRouteServiceProvider::class);
+        $this->getApplication()->register(RouteServiceProvider::class);
     }
 
     /**
@@ -30,11 +30,9 @@ class ShippingServiceProviderTemplateServiceProvider extends ServiceProvider
     )
     {
         $shippingServiceProviderService->registerShippingProvider(
-            ShippingServiceProviders::PLUGIN_NAME,
-            ['de' => ShippingServiceProviders::SHIPPING_SERVICE_PROVIDER_NAME, 'en' => ShippingServiceProviders::SHIPPING_SERVICE_PROVIDER_NAME],
+            ShippingServiceProvider::PLUGIN_NAME,
+            ['de' => ShippingServiceProvider::SHIPPING_SERVICE_PROVIDER_NAME, 'en' => ShippingServiceProvider::SHIPPING_SERVICE_PROVIDER_NAME],
             [
-                'ShippingServiceProviderTemplate\\Controllers\\ShipmentController@registerShipments',
-                'ShippingServiceProviderTemplate\\Controllers\\ShipmentController@deleteShipments',
                 'ShippingServiceProviderTemplate\\Controllers\\ShipmentController@getLabels',
             ]
         );

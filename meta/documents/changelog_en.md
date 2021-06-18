@@ -1,6 +1,7 @@
 # Release Notes for ShippingServiceProviderTemplate
 
-## v1.0.0
-
+## v1.0.0 (2021-06-18)
 ### Added
-[Further information](https://developers.plentymarkets.com/marketplace/plugin-requirements#marketplace-changelog)
+- Implemented basic plugin structure
+
+
