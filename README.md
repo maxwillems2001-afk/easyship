@@ -4,7 +4,7 @@
 
 Use this repository by forking it and editing the following files:
 
-### `src/plugin.json`
+### `plugin.json`
 - edit `name` to match your root folder name
 - edit `namespace` to match your `name`
 
@@ -15,13 +15,8 @@ More info about `plugin.json` file can be found [here](https://developers.plenty
 ---
 
 ### `src/Helpers/ShippingServiceProviders.php`
-- constant `PLUGIN_NAME` defines the name of your new plugin name
+- constant `PLUGIN_NAME` defines the name of your new plugin (should be the same as namespace)
 - constant `SHIPPING_SERVICE_PROVIDER_NAME` is used to define your shipping provider name
-
----
-
-### `src/Controllers/ShippingServiceProviderTemplateController.php`
-- implement `registerShipments()`, `deleteShipments()` and `getLabels()` methods
 
 ---
 
