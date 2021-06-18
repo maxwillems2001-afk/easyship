@@ -6,10 +6,10 @@ use Plenty\Plugin\Controller;
 use Plenty\Plugin\Http\Request;
 
 /**
- * Class ShippingServiceProviderTemplateController
+ * Class ShipmentController
  * @package ShippingServiceProviderTemplate\Controllers
  */
-class ShippingServiceProviderTemplateController extends Controller
+class ShipmentController extends Controller
 {
     /**
      * @param Request $request
@@ -35,5 +35,6 @@ class ShippingServiceProviderTemplateController extends Controller
     public function getLabels()
     {
         // TODO: Implement getLabels method
+        return [];
     }
 }
