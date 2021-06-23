@@ -15,6 +15,6 @@ Use this repository by forking it and editing the following files:
 - Edit `name` to match your root folder name.
 - Edit `namespace` to match your `name`.
 
-**NOTE**: When making changes to `namespace`, all class files have to be updated with the new namespace.
+**NOTE**: When changing the namespace of the plugin, all class files have to be updated with the new namespace.
 
 More information about `plugin.json` file can be found [here](https://developers.plentymarkets.com/en-gb/developers/main/plugin-definition.html).

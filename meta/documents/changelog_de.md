@@ -2,4 +2,4 @@
 
 ## v1.0.0
 ### Hinzugefügt
-- Implemented basic plugin structure
+- Basisstruktur des Plugins implementiert
