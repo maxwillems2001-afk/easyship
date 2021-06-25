@@ -1,4 +1,4 @@
-![plentymarkets Logo](http://www.plentymarkets.eu/layout/pm/images/logo/plentymarkets-logo.jpg)
+![plentymarkets Logo](https://cdn01.plentymarkets.com/avw8j9fg70hi/frontend/website_plentycom/plenty_Logos/plentymarkets/plentymarkets_RGB_LogoClaim_Farbe.png)
 
 # Shipping service provider template plugin for plentymarkets
 
